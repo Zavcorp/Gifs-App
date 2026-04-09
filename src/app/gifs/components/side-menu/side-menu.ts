@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { GifsSideMenuHeader } from "../side-menu-header/gifs-side-menu-header";
 import { GifsSideMenuOptions } from "../side-menu-options/gifs-side-menu-options";
 
@@ -8,4 +8,8 @@ import { GifsSideMenuOptions } from "../side-menu-options/gifs-side-menu-options
   templateUrl: './side-menu.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SideMenu { }
+
+export class SideMenu {
+  @Input() isOpen = true;
+}
+
